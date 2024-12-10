@@ -1,0 +1,20 @@
+<p>firstc works!</p>
+
+<p>{{ componentName }}</p>
+
+<img src="{{ img }}" alt="Angular Logo">
+
+<input type="button" (click)="OnClick()" value="Click me">
+
+<div *ngIf="isActive">
+  <p>My name is Tushar</p>
+</div>
+
+<!-- Display API data -->
+<div *ngIf="apiData">
+  <div *ngFor="let user of apiData">
+    <p>{{ user.name }} (Active: {{ user.isActive }})</p>
+  </div>
+</div>
+
+

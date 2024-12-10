@@ -1,0 +1,32 @@
+<h4>Get API</h4>
+
+<!-- Display API data -->
+<div *ngIf="apiData">
+    <div *ngFor="let user of apiData">
+      <p>{{ user.name }} (Active: {{ user.isActive }})</p>
+    </div>
+  </div>
+
+  <h4>Get User by ID</h4>
+  <!-- Input to fetch user by ID -->
+  <input type="number" placeholder="Enter User ID" #userId />
+  <button (click)="getUserById(+userId.value)">Get User</button>
+  <div *ngIf="userById">
+    <p>User ID: {{ userById.id }}</p>
+    <p>Name: {{ userById.name }}</p>
+    <p>Email: {{ userById.email }}</p>
+  </div>
+
+  <h4>Add New User</h4>
+<!-- Add a user -->
+<button (click)="addUser()">Add User</button>
+
+<h4>Update User</h4>
+<!-- Update user -->
+<input type="number" placeholder="Enter User ID to Update" #updateId />
+<button (click)="updateUser(+updateId.value)">Update User</button>
+
+<h4>Delete User</h4>
+<!-- Delete user -->
+<input type="number" placeholder="Enter User ID to Delete" #deleteId />
+<button (click)="deleteUser(+deleteId.value)">Delete User</button>

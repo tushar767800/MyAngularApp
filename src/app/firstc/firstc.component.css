@@ -1,0 +1,11 @@
+.primary{
+    color: chocolate;
+    font-size: medium;
+    font-weight: 200;
+}
+
+.secondary{
+    color: blue;
+    font-style: italic;
+    font-weight: 200;
+}
